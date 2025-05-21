@@ -1,0 +1,41 @@
+{
+  "tasks": {
+    "test": "deno test --watch",
+    "npm": "deno run --allow-env --allow-read --allow-write --allow-run --allow-net scripts/npm.ts",
+    "local-coverage": "rm coverage/*.json || true &&deno test --coverage=coverage && deno coverage --html"
+  },
+  "lint": {
+    "exclude": [
+      "npm",
+      "docs"
+    ]
+  },
+  "fmt": {
+    "exclude": [
+      "npm",
+      "CHANGELOG.md",
+      ".github",
+      ".vscode",
+      "docs",
+      ".release-please-manifest.json"
+    ]
+  },
+  "test": {
+    "exclude": [
+      "CHANGELOG.md"
+    ]
+  },
+  "exclude": [
+    "npm",
+    "CHANGELOG.md",
+    ".github",
+    ".vscode"
+  ],
+  "name": "@levischuck/tiny-cbor-schema",
+  "version": "0.0.1",
+  "license": "MIT",
+  "exports": "./index.ts",
+  "imports": {
+    "@levischuck/tiny-cbor": "jsr:@levischuck/tiny-cbor@^0.3.1"
+  }
+}

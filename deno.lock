@@ -1,0 +1,34 @@
+{
+  "version": "5",
+  "specifiers": {
+    "jsr:@levischuck/tiny-cbor@*": "0.3.1",
+    "jsr:@levischuck/tiny-cbor@~0.3.1": "0.3.1",
+    "jsr:@std/assert@*": "1.0.11",
+    "jsr:@std/internal@^1.0.5": "1.0.5"
+  },
+  "jsr": {
+    "@levischuck/tiny-cbor@0.3.1": {
+      "integrity": "e40103f393f96140bc4803afb16afdc80ff28a20a9f9ddfc3820a9497154bd1d"
+    },
+    "@std/assert@1.0.11": {
+      "integrity": "2461ef3c368fe88bc60e186e7744a93112f16fd110022e113a0849e94d1c83c1",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    },
+    "@std/internal@1.0.5": {
+      "integrity": "54a546004f769c1ac9e025abd15a76b6671ddc9687e2313b67376125650dc7ba"
+    }
+  },
+  "remote": {
+    "https://deno.land/std@0.224.0/assert/assert_is_error.ts": "f856b3bc978a7aa6a601f3fec6603491ab6255118afa6baa84b04426dd3cc491",
+    "https://deno.land/std@0.224.0/assert/assert_throws.ts": "c6508b2879d465898dab2798009299867e67c570d7d34c90a2d235e4553906eb",
+    "https://deno.land/std@0.224.0/assert/assertion_error.ts": "ba8752bd27ebc51f723702fac2f54d3e94447598f54264a6653d6413738a8917",
+    "https://deno.land/std@0.224.0/fmt/colors.ts": "508563c0659dd7198ba4bbf87e97f654af3c34eb56ba790260f252ad8012e1c5"
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@levischuck/tiny-cbor@~0.3.1"
+    ]
+  }
+}
