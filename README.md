@@ -1,4 +1,4 @@
-# Tiny CBOR
+# Tiny CBOR Schema
 
 [![](https://img.shields.io/github/actions/workflow/status/levischuck/tiny-cbor-schema/build.yaml?branch=main&style=flat-square)](https://github.com/LeviSchuck/tiny-cbor-schema/actions)
 [![](https://img.shields.io/codecov/c/gh/levischuck/tiny-cbor-schema?style=flat-square)](https://codecov.io/gh/levischuck/tiny-cbor-schema)
