@@ -1,5 +1,5 @@
 import type { CBORSchemaType } from "./type.ts";
-import type { CBORType } from "jsr:@levischuck/tiny-cbor";
+import type { CBORType } from "@levischuck/tiny-cbor";
 
 /**
  * Schema for BigInt values to handle integers larger than Number.MAX_SAFE_INTEGER

@@ -1,7 +1,7 @@
 import { assertThrows } from "jsr:@std/assert";
 import { array } from "./array.ts";
 import { integer } from "./integer.ts";
-import type { CBORType } from "jsr:@levischuck/tiny-cbor";
+import type { CBORType } from "@levischuck/tiny-cbor";
 import type { CBORSchemaType } from "./type.ts";
 
 Deno.test("Test type validation - array schema", () => {

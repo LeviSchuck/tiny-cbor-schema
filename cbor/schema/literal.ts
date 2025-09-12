@@ -1,5 +1,5 @@
 import type { CBORSchemaType } from "./type.ts";
-import type { CBORType } from "jsr:@levischuck/tiny-cbor";
+import type { CBORType } from "@levischuck/tiny-cbor";
 
 /**
  * Creates a schema for literal values (string, number, bigint, boolean, Uint8Array, null, or undefined)

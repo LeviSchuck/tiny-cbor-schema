@@ -1,4 +1,4 @@
-import { decodeCBOR, encodeCBOR } from "jsr:@levischuck/tiny-cbor";
+import { decodeCBOR, encodeCBOR } from "@levischuck/tiny-cbor";
 import { array } from "./schema/array.ts";
 import { integer } from "./schema/integer.ts";
 import { string } from "./schema/string.ts";
@@ -26,14 +26,13 @@ import { lazy } from "./schema/lazy.ts";
  * @template T The schema type to infer from
  * @example
  * ```typescript
- *
- * const personSchema = cs.map([
- *   cs.field("name", cs.string),
- *   cs.field("age", cs.integer)
+ * const cwtClaims = cs.map([
+ *   cs.numberField(1, "iss", cs.string),
+ *   cs.numberField(4, "exp", cs.integer),
+ *   cs.numberField(7, "cti", cs.bytes),
  * ]);
  *
- * type Person = valueOf<typeof personSchema>;
- * // Person = { name: string; age: number }
+ * type CWT = valueOf<typeof cwtClaims>;
  * ```
  */
 export type valueOf<T> = CBORSchemaValue<T>;
@@ -49,19 +48,30 @@ export type valueOf<T> = CBORSchemaValue<T>;
  * const numberSchema = cs.float;
  *
  * // Creating complex schemas
- * const personSchema = cs.map([
- *   cs.field("name", cs.string),
- *   cs.field("age", cs.integer),
- *   cs.field("hobbies", cs.array(cs.string))
+ * const Ec2KeyParametersSchema = cs.map([
+ *   cs.numberField(1, "kty", cs.literal(2)),
+ *   cs.numberField(2, "kid", cs.optional(cs.bytes)),
+ *   cs.numberField(3, "alg", cs.optional(cs.literal(-7))),
+ *   cs.numberField(
+ *     4,
+ *     "key_ops",
+ *     cs.optional(cs.array(cs.union([cs.literal(1), cs.literal(2)]))),
+ *   ),
+ *   cs.numberField(-1, "crv", cs.literal(1)),
+ *   cs.numberField(-2, "x", cs.bytes),
+ *   cs.numberField(-3, "y", cs.union([cs.bytes, cs.boolean])),
+ *   cs.numberField(-4, "d", cs.optional(cs.bytes)),
  * ]);
  *
  * // Encoding and decoding
- * const encoded = cs.toCBOR(personSchema, {
- *   name: "Alice",
- *   age: 30,
- *   hobbies: ["reading", "hiking"]
+ * const encoded = cs.toCBOR(Ec2KeyParametersSchema, {
+ *   kty: 2,
+ *   alg: -7,
+ *   crv: 1,
+ *   x: new Uint8Array([1, 2, 3]),
+ *   y: new Uint8Array([4, 5, 6])
  * });
- * const decoded = cs.fromCBOR(personSchema, encoded);
+ * const decoded = cs.fromCBOR(Ec2KeyParametersSchema, encoded);
  * ```
  */
 export class CBORSchema {
@@ -135,19 +145,30 @@ export class CBORSchema {
  * const numberSchema = cs.float;
  *
  * // Creating complex schemas
- * const personSchema = cs.map([
- *   cs.field("name", cs.string),
- *   cs.field("age", cs.integer),
- *   cs.field("hobbies", cs.array(cs.string))
+ * const Ec2KeyParametersSchema = cs.map([
+ *   cs.numberField(1, "kty", cs.literal(2)),
+ *   cs.numberField(2, "kid", cs.optional(cs.bytes)),
+ *   cs.numberField(3, "alg", cs.optional(cs.literal(-7))),
+ *   cs.numberField(
+ *     4,
+ *     "key_ops",
+ *     cs.optional(cs.array(cs.union([cs.literal(1), cs.literal(2)]))),
+ *   ),
+ *   cs.numberField(-1, "crv", cs.literal(1)),
+ *   cs.numberField(-2, "x", cs.bytes),
+ *   cs.numberField(-3, "y", cs.union([cs.bytes, cs.boolean])),
+ *   cs.numberField(-4, "d", cs.optional(cs.bytes)),
  * ]);
  *
  * // Encoding and decoding
- * const encoded = cs.toCBOR(personSchema, {
- *   name: "Alice",
- *   age: 30,
- *   hobbies: ["reading", "hiking"]
+ * const encoded = cs.toCBOR(Ec2KeyParametersSchema, {
+ *   kty: 2,
+ *   alg: -7,
+ *   crv: 1,
+ *   x: new Uint8Array([1, 2, 3]),
+ *   y: new Uint8Array([4, 5, 6])
  * });
- * const decoded = cs.fromCBOR(personSchema, encoded);
+ * const decoded = cs.fromCBOR(Ec2KeyParametersSchema, encoded);
  * ```
  */
 export const cs = CBORSchema;

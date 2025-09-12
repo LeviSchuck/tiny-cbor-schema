@@ -10,21 +10,24 @@
 This minimal generic library decodes and encodes most useful CBOR structures
 into known JavaScript structures! See
 [tiny-cbor](https://github.com/levischuck/tiny-cbor) for limitations on what
-CBOR types are supported.
+CBOR types are supported. It works in a similar way to Zod where you define a
+schema object with functions exported by this library. This schema may then be
+used to 
 
 ## Example
 
-CBOR byte decoding example, this outputs a CBORType which is up to you to ensure
-matches the right underlying type (e.g. a string) at runtime.
+CBOR decoding example, this outputs a javascript value mapped with the schemo
+specified, which is a CBOR sequence / array of string, string, number.
 
 To check that the decoded CBOR matches a schema you expect, or to access it more
-naturally in TypeScript and JavaScript:
+naturally in TypeScript and JavaScript, you may do something like the following:
 
 ```typescript
 // NPM
 // import { cs } from "@levischuck/tiny-cbor-schema";
 // or JSR
 // import { cs } from "jsr:@levischuck/tiny-cbor-schema";
+// (Use one of the above imports! The import below makes this documentation testable)
 import { cs } from "./index.ts";
 
 // Utility to demonstrate the type is known at type-check time
@@ -57,12 +60,27 @@ const doubleChecked: AssertEqual<[string, string, number], typeof parsed> =
 // If the type failed, this will be `never`, which it should not, since fromCBORType will throw
 
 if (
-  Array.isArray(doubleChecked) && doubleChecked.length == 3 &&
-  doubleChecked[0] == "hello" && doubleChecked[1] == "world" &&
-  doubleChecked[2] == 1
+  !Array.isArray(doubleChecked) || doubleChecked.length != 3 ||
+  doubleChecked[0] !== "hello" || doubleChecked[1] !== "world" ||
+  doubleChecked[2] !== 1
 ) {
-  console.log("Success!");
+  // Is never thrown!
+  throw new Error('Did not parse as expected');
 }
+
+const encoded = cs.toCBOR(schema, parsed);
+if (encoded.length != HELLO_WORLD_BYTES.length) {
+  // Is never thrown!
+  throw new Error('Length differs');
+}
+for (let i = 0; i < HELLO_WORLD_BYTES.length; i++) {
+  if (encoded[i] !== HELLO_WORLD_BYTES[i]) {
+    // Is never thrown!
+    throw new Error(`Different byte at ${i}`);
+  }
+}
+
+console.log('Success');
 ```
 
 ## Where to get it

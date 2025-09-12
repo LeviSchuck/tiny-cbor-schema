@@ -1,6 +1,6 @@
 import type { CBORSchemaType } from "./type.ts";
-import type { CBORType } from "jsr:@levischuck/tiny-cbor";
-import { decodeCBOR, encodeCBOR } from "jsr:@levischuck/tiny-cbor";
+import type { CBORType } from "@levischuck/tiny-cbor";
+import { decodeCBOR, encodeCBOR } from "@levischuck/tiny-cbor";
 
 /**
  * Creates a schema for nested CBOR data (CBOR within CBOR)

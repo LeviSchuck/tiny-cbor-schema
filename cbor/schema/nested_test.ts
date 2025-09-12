@@ -4,7 +4,7 @@ import { field, map } from "./map.ts";
 import { string } from "./string.ts";
 import { integer } from "./integer.ts";
 import { assertEquals } from "jsr:@std/assert";
-import { type CBORType, encodeCBOR } from "jsr:@levischuck/tiny-cbor";
+import { type CBORType, encodeCBOR } from "@levischuck/tiny-cbor";
 import type { ExtractFieldType } from "./type.ts";
 import type { CBORSchemaType } from "./type.ts";
 

@@ -3,7 +3,7 @@ import { optional } from "./optional.ts";
 import { float } from "./float.ts";
 import { string } from "./string.ts";
 import { assertEquals } from "jsr:@std/assert";
-import type { CBORType } from "jsr:@levischuck/tiny-cbor";
+import type { CBORType } from "@levischuck/tiny-cbor";
 import type { CBORSchemaType } from "./type.ts";
 
 // Type validation tests

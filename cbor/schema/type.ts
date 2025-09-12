@@ -1,4 +1,4 @@
-import type { CBORType } from "jsr:@levischuck/tiny-cbor";
+import type { CBORType } from "@levischuck/tiny-cbor";
 
 /**
  * Base interface for all CBOR schema types.

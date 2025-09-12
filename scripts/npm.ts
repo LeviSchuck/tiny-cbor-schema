@@ -1,8 +1,11 @@
 // ex. scripts/build_npm.ts
-import { build, emptyDir } from "https://deno.land/x/dnt@0.40.0/mod.ts";
+import { build, emptyDir } from "../../dnt/mod.ts";
 
 await emptyDir("./npm");
 
+const lockFile = JSON.parse(await Deno.readTextFile("./deno.lock"));
+
+const tinyCborVersion = lockFile.specifiers["jsr:@levischuck/tiny-cbor@*"];
 await build({
   entryPoints: ["./index.ts"],
   outDir: "./npm",
@@ -10,6 +13,12 @@ await build({
     deno: true,
   },
   test: false,
+  mappings: {
+    ["jsr:@levischuck/tiny-cbor"]: {
+      name: "@levischuck/tiny-cbor",
+      version: tinyCborVersion,
+    },
+  },
   package: {
     // package.json properties
     name: "@levischuck/tiny-cbor-schema",

@@ -1,5 +1,5 @@
 import type { CBORSchemaType } from "./type.ts";
-import { CBORTag, type CBORType } from "jsr:@levischuck/tiny-cbor";
+import { CBORTag, type CBORType } from "@levischuck/tiny-cbor";
 
 /**
  * A typed tag that preserves both the tag number and value type information

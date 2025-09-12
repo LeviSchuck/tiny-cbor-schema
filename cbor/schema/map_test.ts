@@ -6,7 +6,7 @@ import { integer } from "./integer.ts";
 import { optional } from "./optional.ts";
 import { assertEquals } from "jsr:@std/assert";
 import type { ExtractFieldType } from "./type.ts";
-import type { CBORType } from "jsr:@levischuck/tiny-cbor";
+import type { CBORType } from "@levischuck/tiny-cbor";
 import type { CBORSchemaType, CBORSchemaValue } from "./type.ts";
 
 // Type validation tests

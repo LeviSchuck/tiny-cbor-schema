@@ -2,7 +2,7 @@ import { assertEquals, assertThrows } from "jsr:@std/assert";
 import { cs } from "../cbor_schema.ts";
 import { lazy } from "./lazy.ts";
 import type { CBORSchemaType } from "./type.ts";
-import type { CBORType } from "jsr:@levischuck/tiny-cbor";
+import type { CBORType } from "@levischuck/tiny-cbor";
 import { assertStringIncludes } from "jsr:@std/assert/string-includes";
 
 Deno.test("Test basic lazy schema", () => {

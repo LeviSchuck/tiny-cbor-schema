@@ -1,5 +1,5 @@
 import type { CBORSchemaType } from "./type.ts";
-import type { CBORType } from "jsr:@levischuck/tiny-cbor";
+import type { CBORType } from "@levischuck/tiny-cbor";
 
 /**
  * Creates a lazy schema that defers schema resolution until runtime.

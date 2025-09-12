@@ -7,7 +7,7 @@ import type {
   MakeOptional,
   MapSchemaType,
 } from "./type.ts";
-import type { CBORType } from "jsr:@levischuck/tiny-cbor";
+import type { CBORType } from "@levischuck/tiny-cbor";
 
 /**
  * Creates a schema for CBOR maps that decode to TypeScript objects
@@ -18,20 +18,21 @@ import type { CBORType } from "jsr:@levischuck/tiny-cbor";
  * @example
  * ```typescript
  * import { cs } from "../cbor_schema.ts";
- * const personSchema = cs.map([
- *   cs.field("name", cs.string),
- *   cs.numberField(1, "age", cs.integer),
- *   cs.field("email", cs.optional(cs.string))
+ * const cwtSchema = cs.map([
+ *   cs.numberField(1, "iss", cs.string),     // issuer
+ *   cs.numberField(4, "exp", cs.integer),    // expiration time
+ *   cs.numberField(7, "cti", cs.bytes),      // CWT ID
+ *   cs.field("cty", cs.optional(cs.string))  // content type (string key)
  * ]);
  *
- * const person = {
- *   name: "Alice",
- *   age: 30,
- *   email: "alice@example.com"
+ * const claims = {
+ *   iss: "example-issuer",
+ *   exp: 1_725_000_000,
+ *   cti: new Uint8Array([0x01, 0x02, 0x03])
  * };
  *
- * const encoded = cs.toCBOR(personSchema, person);
- * const decoded = cs.fromCBOR(personSchema, encoded);
+ * const encoded = cs.toCBOR(cwtSchema, claims);
+ * const decoded = cs.fromCBOR(cwtSchema, encoded);
  * ```
  */
 export function map<Fields extends FieldDefinition<unknown, string>[]>(
@@ -178,8 +179,8 @@ export function map<Fields extends FieldDefinition<unknown, string>[]>(
  * @example
  * ```typescript
  * import { cs } from "../cbor_schema.ts";
- * const nameField = cs.field("name", cs.string);
- * const emailField = cs.field("email", cs.optional(cs.string));
+ * const contentTypeField = cs.field("cty", cs.string);
+ * const kidHeaderField = cs.field("kid", cs.optional(cs.bytes));
  * ```
  */
 export function field<T, K extends string>(
@@ -205,8 +206,8 @@ export function field<T, K extends string>(
  * @example
  * ```typescript
  * import { cs } from "../cbor_schema.ts";
- * const ageField = cs.numberField(1, "age", cs.integer);
- * const scoreField = cs.numberField(2, "score", cs.float);
+ * const ktyField = cs.numberField(1, "kty", cs.integer);
+ * const algField = cs.numberField(3, "alg", cs.integer);
  * ```
  */
 export function numberField<T, K extends string>(

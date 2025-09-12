@@ -1,14 +1,44 @@
 {
   "version": "5",
   "specifiers": {
+    "jsr:@david/code-block-writer@^13.0.2": "13.0.3",
+    "jsr:@deno/cache-dir@0.20": "0.20.1",
     "jsr:@levischuck/tiny-cbor@*": "0.3.1",
     "jsr:@levischuck/tiny-cbor@~0.3.1": "0.3.1",
+    "jsr:@levischuck/tiny-encodings@*": "0.2.10",
+    "jsr:@levischuck/tiny-encodings@~0.2.10": "0.2.10",
     "jsr:@std/assert@*": "1.0.11",
-    "jsr:@std/internal@^1.0.5": "1.0.5"
+    "jsr:@std/bytes@^1.0.5": "1.0.6",
+    "jsr:@std/fmt@1": "1.0.8",
+    "jsr:@std/fmt@^1.0.3": "1.0.8",
+    "jsr:@std/fs@1": "1.0.17",
+    "jsr:@std/fs@^1.0.6": "1.0.17",
+    "jsr:@std/internal@^1.0.5": "1.0.5",
+    "jsr:@std/io@0.225": "0.225.2",
+    "jsr:@std/path@1": "1.0.9",
+    "jsr:@std/path@^1.0.8": "1.0.9",
+    "jsr:@std/path@^1.0.9": "1.0.9",
+    "jsr:@ts-morph/bootstrap@0.25": "0.25.0",
+    "jsr:@ts-morph/common@0.25": "0.25.0"
   },
   "jsr": {
+    "@david/code-block-writer@13.0.3": {
+      "integrity": "f98c77d320f5957899a61bfb7a9bead7c6d83ad1515daee92dbacc861e13bb7f"
+    },
+    "@deno/cache-dir@0.20.1": {
+      "integrity": "dc4f3add14307f3ff3b712441ea4acabcbfc9a13f67c5adc78c3aac16ac5e2a0",
+      "dependencies": [
+        "jsr:@std/fmt@^1.0.3",
+        "jsr:@std/fs@^1.0.6",
+        "jsr:@std/io",
+        "jsr:@std/path@^1.0.8"
+      ]
+    },
     "@levischuck/tiny-cbor@0.3.1": {
       "integrity": "e40103f393f96140bc4803afb16afdc80ff28a20a9f9ddfc3820a9497154bd1d"
+    },
+    "@levischuck/tiny-encodings@0.2.10": {
+      "integrity": "c25912ee2cd54986033e2d4de8f638268c574594396efa4e88c8d606849f25f0"
     },
     "@std/assert@1.0.11": {
       "integrity": "2461ef3c368fe88bc60e186e7744a93112f16fd110022e113a0849e94d1c83c1",
@@ -16,8 +46,42 @@
         "jsr:@std/internal"
       ]
     },
+    "@std/bytes@1.0.6": {
+      "integrity": "f6ac6adbd8ccd99314045f5703e23af0a68d7f7e58364b47d2c7f408aeb5820a"
+    },
+    "@std/fmt@1.0.8": {
+      "integrity": "71e1fc498787e4434d213647a6e43e794af4fd393ef8f52062246e06f7e372b7"
+    },
+    "@std/fs@1.0.17": {
+      "integrity": "1c00c632677c1158988ef7a004cb16137f870aafdb8163b9dce86ec652f3952b",
+      "dependencies": [
+        "jsr:@std/path@^1.0.9"
+      ]
+    },
     "@std/internal@1.0.5": {
       "integrity": "54a546004f769c1ac9e025abd15a76b6671ddc9687e2313b67376125650dc7ba"
+    },
+    "@std/io@0.225.2": {
+      "integrity": "3c740cd4ee4c082e6cfc86458f47e2ab7cb353dc6234d5e9b1f91a2de5f4d6c7",
+      "dependencies": [
+        "jsr:@std/bytes"
+      ]
+    },
+    "@std/path@1.0.9": {
+      "integrity": "260a49f11edd3db93dd38350bf9cd1b4d1366afa98e81b86167b4e3dd750129e"
+    },
+    "@ts-morph/bootstrap@0.25.0": {
+      "integrity": "3cd33ee80ac0aab8e5d2660c639a02187f0c8abfe454636ce86c00eb7e8407db",
+      "dependencies": [
+        "jsr:@ts-morph/common"
+      ]
+    },
+    "@ts-morph/common@0.25.0": {
+      "integrity": "e3ed1771e2fb61fbc3d2cb39ebbc4f89cd686d6d9bc6d91a71372be055ac1967",
+      "dependencies": [
+        "jsr:@std/fs@1",
+        "jsr:@std/path@1"
+      ]
     }
   },
   "remote": {
@@ -28,7 +92,16 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@levischuck/tiny-cbor@~0.3.1"
+      "jsr:@david/code-block-writer@^13.0.2",
+      "jsr:@deno/cache-dir@0.20",
+      "jsr:@deno/dnt@*",
+      "jsr:@levischuck/tiny-cbor@~0.3.1",
+      "jsr:@levischuck/tiny-encodings@~0.2.10",
+      "jsr:@std/assert@1",
+      "jsr:@std/fmt@1",
+      "jsr:@std/fs@1",
+      "jsr:@std/path@1",
+      "jsr:@ts-morph/bootstrap@0.25"
     ]
   }
 }

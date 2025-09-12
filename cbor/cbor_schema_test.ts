@@ -1,7 +1,7 @@
 import { assertEquals, assertThrows } from "jsr:@std/assert";
 import { cs } from "./cbor_schema.ts";
 import type { CBORSchemaType } from "./schema/type.ts";
-import { CBORTag, type CBORType } from "jsr:@levischuck/tiny-cbor";
+import { CBORTag, type CBORType } from "@levischuck/tiny-cbor";
 import type { CBORTypedTag } from "./schema/tagged.ts";
 import { lazy } from "./schema/lazy.ts";
 
