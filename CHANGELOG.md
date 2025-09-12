@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.9](https://github.com/LeviSchuck/tiny-cbor-schema/compare/v0.0.8...v0.0.9) (2025-09-12)
+
+
+### Bug Fixes
+
+* Retry release on JSR ([3a21dc3](https://github.com/LeviSchuck/tiny-cbor-schema/commit/3a21dc3c0efc3d71d190e243263b498ca7ca4854))
+
 ## [0.0.3](https://github.com/LeviSchuck/tiny-cbor-schema/compare/v0.0.2...v0.0.3) (2025-09-12)
 
 
