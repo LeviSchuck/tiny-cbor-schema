@@ -40,3 +40,4 @@ jobs:
           use_oidc: true
         with:
           files: ./coverage.lcov
+          slug: LeviSchuck/tiny-cbor-schema
