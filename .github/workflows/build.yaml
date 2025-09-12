@@ -40,4 +40,7 @@ jobs:
           use_oidc: true
         with:
           files: ./coverage.lcov
+          token: ${{ secrets.CODECOV_TOKEN }}
           slug: LeviSchuck/tiny-cbor-schema
+          fail_ci_if_error: true
+          verbose: true
