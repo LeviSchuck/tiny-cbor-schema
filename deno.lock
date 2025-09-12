@@ -3,6 +3,7 @@
   "specifiers": {
     "jsr:@david/code-block-writer@^13.0.2": "13.0.3",
     "jsr:@deno/cache-dir@0.20": "0.20.1",
+    "jsr:@deno/dnt@*": "0.42.1",
     "jsr:@levischuck/tiny-cbor@*": "0.3.1",
     "jsr:@levischuck/tiny-cbor@~0.3.1": "0.3.1",
     "jsr:@levischuck/tiny-encodings@*": "0.2.10",
@@ -32,6 +33,17 @@
         "jsr:@std/fs@^1.0.6",
         "jsr:@std/io",
         "jsr:@std/path@^1.0.8"
+      ]
+    },
+    "@deno/dnt@0.42.1": {
+      "integrity": "85322b38eb40d4e8c5216d62536152c35b1bda9dc47c8c60860610397b960223",
+      "dependencies": [
+        "jsr:@david/code-block-writer",
+        "jsr:@deno/cache-dir",
+        "jsr:@std/fmt@1",
+        "jsr:@std/fs@1",
+        "jsr:@std/path@1",
+        "jsr:@ts-morph/bootstrap"
       ]
     },
     "@levischuck/tiny-cbor@0.3.1": {
