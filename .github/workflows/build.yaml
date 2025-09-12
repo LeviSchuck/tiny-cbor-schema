@@ -10,6 +10,17 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
+      - name: Get tag version
+        id: get_tag_version
+        run: echo TAG_VERSION=$(cat "version.txt" | tr -d '\n') >> $GITHUB_OUTPUT
+      - name: Read Tag version
+        run: |
+          echo $TAG_VERSION
+          # Update deno.json version
+          cat "deno.json" | jq ".version = \"$TAG_VERSION\"" > "deno-updated.json"
+          mv "deno-updated.json" "deno.json"
+        env: 
+          TAG_VERSION: ${{ steps.get_tag_version.outputs.TAG_VERSION }}
       - uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
