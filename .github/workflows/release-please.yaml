@@ -60,6 +60,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: cd npm && npm publish --access public
-      - name: Publish JSX
+      - name: Publish to JSR
         if: ${{ steps.release.outputs.release_created }}
         run: npx jsr publish --allow-dirty
