@@ -14,6 +14,28 @@ CBOR types are supported. It works in a similar way to Zod where you define a
 schema object with functions exported by this library. This schema may then be
 used to
 
+## Installation
+
+You can install the latest version with:
+
+**Node**
+
+```bash
+npm i @levischuck/tiny-cbor-schema
+```
+
+**Deno**
+
+```bash
+deno add jsr:@levischuck/tiny-cbor-schema
+```
+
+**Bun**
+
+```
+bunx jsr add "@levischuck/tiny-cbor-schema"
+```
+
 ## Example
 
 CBOR decoding example, this outputs a javascript value mapped with the schemo

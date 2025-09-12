@@ -4,12 +4,12 @@
       "release-type": "simple",
       "include-component-in-tag": false,
       "extra-files": [
-        "version.txt",
         {
           "type": "json",
           "path": "deno.json",
           "jsonpath": "$.version"
-        }
+        },
+        "version.txt"
       ]
     }
   }
