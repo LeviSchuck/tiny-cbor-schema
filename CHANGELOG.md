@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.0.0 (2025-09-12)
+
+
+### Bug Fixes
+
+* Allow for dirty commits to keep the versions in sync ([433e8e4](https://github.com/LeviSchuck/tiny-cbor-schema/commit/433e8e424fe93efc5917950c42173ef4b9aa116b))
+* Deno formatting ([eca4133](https://github.com/LeviSchuck/tiny-cbor-schema/commit/eca4133d6a12f38e2c3ae83c0fc34d6f143d4697))
+* Deno lint ([7021176](https://github.com/LeviSchuck/tiny-cbor-schema/commit/7021176b6bb87085031cd56c282b3542b7dd2a21))
+* Post process DNT to be suitable for NPM ([808464e](https://github.com/LeviSchuck/tiny-cbor-schema/commit/808464ed608d5b73846c1f28b0ba7fbbb413e7fb))
+* Prepare for initial release ([199d234](https://github.com/LeviSchuck/tiny-cbor-schema/commit/199d234847efbd5f86ccb61848dce65755336e27))
+* Sync deno and npm versions ([8acd91b](https://github.com/LeviSchuck/tiny-cbor-schema/commit/8acd91b20aea67b02e5cfbb41af4022722c648d1))
+* Tweak release please ([551027c](https://github.com/LeviSchuck/tiny-cbor-schema/commit/551027c83643b0ce43988c6e4c6616e29d14a8b3))
+* Updated documentation and readme ([79cba2b](https://github.com/LeviSchuck/tiny-cbor-schema/commit/79cba2b088581564b284f462e949af6f516b0b3c))
+* Use Deno DNT instead of local DNT ([d17cbdb](https://github.com/LeviSchuck/tiny-cbor-schema/commit/d17cbdb7daf4f12d854ad1df2f34f29e69be8b05))
+
 ## [0.0.6](https://github.com/LeviSchuck/tiny-cbor-schema/compare/v0.0.5...v0.0.6) (2025-09-12)
 
 
