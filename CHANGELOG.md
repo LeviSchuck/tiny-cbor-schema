@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.7](https://github.com/LeviSchuck/tiny-cbor-schema/compare/v0.0.6...v0.0.7) (2025-09-12)
+
+
+### Bug Fixes
+
+* use release please configuration ([ce1baf1](https://github.com/LeviSchuck/tiny-cbor-schema/commit/ce1baf1f3f847ad9ee6f32c23d8d351198f0a201))
+
 ## [0.0.6](https://github.com/LeviSchuck/tiny-cbor-schema/compare/v0.0.5...v0.0.6) (2025-09-12)
 
 
