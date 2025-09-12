@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.4](https://github.com/LeviSchuck/tiny-cbor-schema/compare/v0.0.3...v0.0.4) (2025-09-12)
+
+
+### Bug Fixes
+
+* Use Deno DNT instead of local DNT ([7305581](https://github.com/LeviSchuck/tiny-cbor-schema/commit/7305581307a8428b8fd7bfc43e0a3f44bb99081d))
+
 ## [0.0.3](https://github.com/LeviSchuck/tiny-cbor-schema/compare/v0.0.2...v0.0.3) (2025-09-12)
 
 
