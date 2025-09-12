@@ -16,9 +16,6 @@ jobs:
       - name: Read Tag version
         run: |
           echo $TAG_VERSION
-          # Update deno.json version
-          cat "deno.json" | jq ".version = \"$TAG_VERSION\"" > "deno-updated.json"
-          mv "deno-updated.json" "deno.json"
         env: 
           TAG_VERSION: ${{ steps.get_tag_version.outputs.TAG_VERSION }}
       - uses: denoland/setup-deno@v2
