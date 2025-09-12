@@ -62,4 +62,4 @@ jobs:
         run: cd npm && npm publish --access public
       - name: Publish JSX
         if: ${{ steps.release.outputs.release_created }}
-        run: npx jsr publish
+        run: npx jsr publish --allow-dirty
