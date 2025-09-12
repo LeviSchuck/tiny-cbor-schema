@@ -12,7 +12,7 @@ into known JavaScript structures! See
 [tiny-cbor](https://github.com/levischuck/tiny-cbor) for limitations on what
 CBOR types are supported. It works in a similar way to Zod where you define a
 schema object with functions exported by this library. This schema may then be
-used to 
+used to
 
 ## Example
 
@@ -65,13 +65,13 @@ if (
   doubleChecked[2] !== 1
 ) {
   // Is never thrown!
-  throw new Error('Did not parse as expected');
+  throw new Error("Did not parse as expected");
 }
 
 const encoded = cs.toCBOR(schema, parsed);
 if (encoded.length != HELLO_WORLD_BYTES.length) {
   // Is never thrown!
-  throw new Error('Length differs');
+  throw new Error("Length differs");
 }
 for (let i = 0; i < HELLO_WORLD_BYTES.length; i++) {
   if (encoded[i] !== HELLO_WORLD_BYTES[i]) {
@@ -80,7 +80,7 @@ for (let i = 0; i < HELLO_WORLD_BYTES.length; i++) {
   }
 }
 
-console.log('Success');
+console.log("Success");
 ```
 
 ## Where to get it

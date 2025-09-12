@@ -44,15 +44,25 @@ await build({
     const dependencies = packageJson.dependencies || {};
     packageJson.dependencies = dependencies;
     dependencies["@levischuck/tiny-cbor"] = tinyCborVersion;
-    Deno.writeTextFileSync("npm/package.json", JSON.stringify(packageJson, null, 2));
+    Deno.writeTextFileSync(
+      "npm/package.json",
+      JSON.stringify(packageJson, null, 2),
+    );
     // Run npm install again
-    const proc = new Deno.Command("npm", { args: ['install'], cwd: "npm" }).outputSync();
+    const proc = new Deno.Command("npm", { args: ["install"], cwd: "npm" })
+      .outputSync();
     if (proc.code !== 0) {
       throw new Error(`Failed to run npm install: ${proc.code}`);
     }
-    Deno.removeSync("npm/esm/deps/jsr.io/@levischuck/tiny-cbor", {recursive: true});
-    Deno.removeSync("npm/script/deps/jsr.io/@levischuck/tiny-cbor", {recursive: true});
-    Deno.removeSync("npm/src/deps/jsr.io/@levischuck/tiny-cbor", {recursive: true});
+    Deno.removeSync("npm/esm/deps/jsr.io/@levischuck/tiny-cbor", {
+      recursive: true,
+    });
+    Deno.removeSync("npm/script/deps/jsr.io/@levischuck/tiny-cbor", {
+      recursive: true,
+    });
+    Deno.removeSync("npm/src/deps/jsr.io/@levischuck/tiny-cbor", {
+      recursive: true,
+    });
 
     // Scan all JS files (recursive) and replace
     // "../deps/jsr.io/@levischuck/tiny-cbor/**/index.js" with "@levischuck/tiny-cbor"
@@ -78,13 +88,15 @@ await build({
     const allFiles = [...esmFiles, ...scriptFiles, ...srcFiles];
 
     // Filter for JS files and replace imports
-    const jsFiles = allFiles.filter(file => file.endsWith('.js') || file.endsWith('.d.ts') || file.endsWith('.ts'));
+    const jsFiles = allFiles.filter((file) =>
+      file.endsWith(".js") || file.endsWith(".d.ts") || file.endsWith(".ts")
+    );
 
     for (const file of jsFiles) {
       const content = Deno.readTextFileSync(file);
       const updatedContent = content.replace(
         /(\.\.\/)+deps\/jsr\.io\/@levischuck\/tiny-cbor\/[^\/]+\/index\.js/g,
-        '@levischuck/tiny-cbor'
+        "@levischuck/tiny-cbor",
       );
       if (updatedContent !== content) {
         Deno.writeTextFileSync(file, updatedContent);
@@ -121,14 +133,13 @@ await build({
 
     // Lastly, update all src imports that end in .js to use no extension
     for (const file of srcFiles) {
-      if (!file.endsWith('.ts')) {
+      if (!file.endsWith(".ts")) {
         continue;
       }
       console.log(`Updating ${file}`);
       const content = Deno.readTextFileSync(file);
-      const updatedContent = content.replace(/\.js('|")/g, '.ts$1');
+      const updatedContent = content.replace(/\.js('|")/g, ".ts$1");
       Deno.writeTextFileSync(file, updatedContent);
     }
-
   },
 });
