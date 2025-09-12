@@ -1,8 +1,8 @@
-import { assertThrows } from "jsr:@std/assert";
+import { assertThrows } from "@std/assert";
 import { type CBORTypedTag, tagged } from "./tagged.ts";
 import { string } from "./string.ts";
 import { CBORTag, type CBORType } from "@levischuck/tiny-cbor";
-import { assertEquals } from "jsr:@std/assert";
+import { assertEquals } from "@std/assert";
 import type { CBORSchemaType } from "./type.ts";
 
 // Type validation tests

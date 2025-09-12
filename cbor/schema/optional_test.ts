@@ -1,8 +1,8 @@
-import { assertThrows } from "jsr:@std/assert";
+import { assertThrows } from "@std/assert";
 import { optional } from "./optional.ts";
 import { float } from "./float.ts";
 import { string } from "./string.ts";
-import { assertEquals } from "jsr:@std/assert";
+import { assertEquals } from "@std/assert";
 import type { CBORType } from "@levischuck/tiny-cbor";
 import type { CBORSchemaType } from "./type.ts";
 

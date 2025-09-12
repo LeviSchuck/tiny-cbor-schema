@@ -1,5 +1,5 @@
 import { cs } from "../index.ts";
-import { decodeBase64Url } from "jsr:@levischuck/tiny-encodings";
+import { decodeBase64Url } from "@levischuck/tiny-encodings";
 
 const Ec2KeyParametersSchema = cs.map([
   cs.numberField(1, "kty", cs.literal(2)), // EC2 (ECDSA)

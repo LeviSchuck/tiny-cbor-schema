@@ -1,10 +1,10 @@
-import { assertThrows } from "jsr:@std/assert";
+import { assertThrows } from "@std/assert";
 import { field, map, numberField } from "./map.ts";
 import { float } from "./float.ts";
 import { string } from "./string.ts";
 import { integer } from "./integer.ts";
 import { optional } from "./optional.ts";
-import { assertEquals } from "jsr:@std/assert";
+import { assertEquals } from "@std/assert";
 import type { ExtractFieldType } from "./type.ts";
 import type { CBORType } from "@levischuck/tiny-cbor";
 import type { CBORSchemaType, CBORSchemaValue } from "./type.ts";

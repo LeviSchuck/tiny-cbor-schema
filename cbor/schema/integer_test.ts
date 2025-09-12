@@ -1,6 +1,6 @@
-import { assertThrows } from "https://deno.land/std@0.224.0/assert/assert_throws.ts";
+import { assertThrows } from "@std/assert";
 import { integer } from "./integer.ts";
-import { assertEquals } from "jsr:@std/assert";
+import { assertEquals } from "@std/assert";
 
 // Type validation tests
 Deno.test("Integer types with invalid inputs - fromCBORType", () => {

@@ -1,4 +1,4 @@
-import { assertEquals, assertThrows } from "jsr:@std/assert";
+import { assertEquals, assertThrows } from "@std/assert";
 import { cs } from "./cbor_schema.ts";
 import type { CBORSchemaType } from "./schema/type.ts";
 import { CBORTag, type CBORType } from "@levischuck/tiny-cbor";

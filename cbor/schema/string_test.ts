@@ -1,6 +1,6 @@
-import { assertThrows } from "jsr:@std/assert";
+import { assertThrows } from "@std/assert";
 import { string } from "./string.ts";
-import { assertEquals } from "jsr:@std/assert";
+import { assertEquals } from "@std/assert";
 
 // Type validation tests
 Deno.test("String types with invalid inputs - fromCBORType", () => {

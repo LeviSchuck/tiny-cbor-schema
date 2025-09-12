@@ -1,4 +1,4 @@
-import { assertThrows } from "jsr:@std/assert";
+import { assertThrows } from "@std/assert";
 import { array } from "./array.ts";
 import { integer } from "./integer.ts";
 import type { CBORType } from "@levischuck/tiny-cbor";

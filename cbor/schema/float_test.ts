@@ -1,6 +1,6 @@
-import { assertThrows } from "jsr:@std/assert";
+import { assertThrows } from "@std/assert";
 import { float } from "./float.ts";
-import { assertEquals } from "jsr:@std/assert";
+import { assertEquals } from "@std/assert";
 
 // Type validation tests
 Deno.test("Float types with invalid inputs - fromCBORType", () => {

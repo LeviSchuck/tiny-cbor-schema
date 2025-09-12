@@ -1,5 +1,5 @@
-import { assertThrows } from "jsr:@std/assert";
-import { assertEquals } from "jsr:@std/assert";
+import { assertThrows } from "@std/assert";
+import { assertEquals } from "@std/assert";
 import { literal } from "./literal.ts";
 
 // Test string literals

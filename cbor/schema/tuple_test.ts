@@ -1,8 +1,8 @@
-import { assertThrows } from "jsr:@std/assert";
+import { assertThrows } from "@std/assert";
 import { tuple } from "./tuple.ts";
 import { float } from "./float.ts";
 import { string } from "./string.ts";
-import { assertEquals } from "jsr:@std/assert";
+import { assertEquals } from "@std/assert";
 import { integer } from "./integer.ts";
 import { boolean } from "./boolean.ts";
 import type { CBORSchemaType } from "./type.ts";

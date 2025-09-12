@@ -1,9 +1,9 @@
-import { assertThrows } from "jsr:@std/assert";
+import { assertThrows } from "@std/assert";
 import { nested } from "./nested.ts";
 import { field, map } from "./map.ts";
 import { string } from "./string.ts";
 import { integer } from "./integer.ts";
-import { assertEquals } from "jsr:@std/assert";
+import { assertEquals } from "@std/assert";
 import { type CBORType, encodeCBOR } from "@levischuck/tiny-cbor";
 import type { ExtractFieldType } from "./type.ts";
 import type { CBORSchemaType } from "./type.ts";
