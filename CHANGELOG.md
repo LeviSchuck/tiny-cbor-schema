@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.8](https://github.com/LeviSchuck/tiny-cbor-schema/compare/v0.0.7...v0.0.8) (2025-09-12)
+
+
+### Bug Fixes
+
+* Change JSX to JSR in github actions ([b6837bd](https://github.com/LeviSchuck/tiny-cbor-schema/commit/b6837bd24fc57b0026c1935565d38336afeabb34))
+
 ## [0.0.7](https://github.com/LeviSchuck/tiny-cbor-schema/compare/v0.0.6...v0.0.7) (2025-09-12)
 
 
