@@ -13,8 +13,7 @@ TypeScript, parsed outputs will have the types you expect too. _See
 [tiny-cbor](https://github.com/levischuck/tiny-cbor), which is automatically
 included, for limitations on what CBOR types are supported._ It works in a
 similar way to Zod where you define a schema object with functions exported by
-this library. This schema may then be used to decode CBOR binary content or
-encode JavaScript objects to CBOR.
+this library. With this schema in hand, you can use the `fromCBOR` and `toCBOR` functions to read, update, and write CBOR binary data.
 
 ## Installation
 
