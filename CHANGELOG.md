@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.6](https://github.com/LeviSchuck/tiny-cbor-schema/compare/v0.0.5...v0.0.6) (2025-09-12)
+
+
+### Bug Fixes
+
+* Allow for dirty commits to keep the versions in sync ([1e8bd4c](https://github.com/LeviSchuck/tiny-cbor-schema/commit/1e8bd4c5f05e8fa208acd0393f7d084887d5905d))
+
 ## [0.0.5](https://github.com/LeviSchuck/tiny-cbor-schema/compare/v0.0.4...v0.0.5) (2025-09-12)
 
 
