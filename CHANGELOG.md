@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.5](https://github.com/LeviSchuck/tiny-cbor-schema/compare/v0.0.4...v0.0.5) (2025-09-12)
+
+
+### Bug Fixes
+
+* Sync deno and npm versions ([8b2dd89](https://github.com/LeviSchuck/tiny-cbor-schema/commit/8b2dd89921fe8190f8c94d3c673bc426506828f3))
+
 ## [0.0.4](https://github.com/LeviSchuck/tiny-cbor-schema/compare/v0.0.3...v0.0.4) (2025-09-12)
 
 
