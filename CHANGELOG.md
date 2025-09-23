@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.10](https://github.com/LeviSchuck/tiny-cbor-schema/compare/v0.0.9...v0.0.10) (2025-09-23)
+
+
+### Bug Fixes
+
+* Bump tiny-cbor ([4872a5f](https://github.com/LeviSchuck/tiny-cbor-schema/commit/4872a5f98090a9737f05f4c222b49d662ac42c9a))
+
 ## [0.0.9](https://github.com/LeviSchuck/tiny-cbor-schema/compare/v0.0.8...v0.0.9) (2025-09-12)
 
 
