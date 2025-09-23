@@ -33,11 +33,8 @@ jobs:
         run: deno coverage ./coverage --lcov > coverage.lcov
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
-        env:
-          use_oidc: true
         with:
+          use_oidc: true
           files: ./coverage.lcov
-          token: ${{ secrets.CODECOV_TOKEN }}
           slug: LeviSchuck/tiny-cbor-schema
           fail_ci_if_error: true
-          verbose: true
