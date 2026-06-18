@@ -5,8 +5,8 @@
     "jsr:@deno/cache-dir@0.20": "0.20.1",
     "jsr:@deno/dnt@*": "0.42.1",
     "jsr:@deno/graph@0.86": "0.86.9",
-    "jsr:@levischuck/tiny-cbor@~0.3.2": "0.3.2",
-    "jsr:@levischuck/tiny-encodings@~0.2.11": "0.2.11",
+    "jsr:@levischuck/tiny-cbor@~0.3.6": "0.3.6",
+    "jsr:@levischuck/tiny-encodings@~0.2.13": "0.2.13",
     "jsr:@std/assert@*": "1.0.11",
     "jsr:@std/assert@1": "1.0.11",
     "jsr:@std/bytes@^1.0.5": "1.0.6",
@@ -51,11 +51,11 @@
     "@deno/graph@0.86.9": {
       "integrity": "c4f353a695bcc5246c099602977dabc6534eacea9999a35a8cb24e807192e6a1"
     },
-    "@levischuck/tiny-cbor@0.3.2": {
-      "integrity": "2c93ec8100c18c6c3131d700dcc71dc9913141f5649e36d74b7798fe6d53d7aa"
+    "@levischuck/tiny-cbor@0.3.6": {
+      "integrity": "ba06c8c1cd45d2daebd56defcb63c3bfafec3a1a56721467ccdfdafbab995ae7"
     },
-    "@levischuck/tiny-encodings@0.2.11": {
-      "integrity": "1590d680917d7e6eacb0dba4c58e434143f00ac75a8b5683fda5e7da095fe925"
+    "@levischuck/tiny-encodings@0.2.13": {
+      "integrity": "13b42faaa70480c346d5d4c6b541d8a7ceb5e7e443e0a78c428c951d776abdeb"
     },
     "@std/assert@1.0.11": {
       "integrity": "2461ef3c368fe88bc60e186e7744a93112f16fd110022e113a0849e94d1c83c1",
@@ -123,8 +123,8 @@
       "jsr:@david/code-block-writer@^13.0.2",
       "jsr:@deno/cache-dir@0.20",
       "jsr:@deno/dnt@*",
-      "jsr:@levischuck/tiny-cbor@~0.3.2",
-      "jsr:@levischuck/tiny-encodings@~0.2.11",
+      "jsr:@levischuck/tiny-cbor@~0.3.6",
+      "jsr:@levischuck/tiny-encodings@~0.2.13",
       "jsr:@std/assert@1",
       "jsr:@std/fmt@1",
       "jsr:@std/fs@1",
