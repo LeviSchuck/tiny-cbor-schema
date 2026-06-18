@@ -33,10 +33,10 @@ await build({
     license: "MIT",
     repository: {
       type: "git",
-      url: "git+https://github.com/levischuck/tiny-cbor-schema.git",
+      url: "https://github.com/LeviSchuck/tiny-cbor-schema",
     },
     bugs: {
-      url: "https://github.com/levischuck/tiny-cbor-schema/issues",
+      url: "https://github.com/LeviSchuck/tiny-cbor-schema/issues",
     },
     types: "./esm/index.d.ts",
     exports: {
