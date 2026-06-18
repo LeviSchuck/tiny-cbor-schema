@@ -5,7 +5,12 @@ await emptyDir("./npm");
 
 const lockFile = JSON.parse(await Deno.readTextFile("./deno.lock"));
 
-const tinyCborVersion = lockFile.specifiers["jsr:@levischuck/tiny-cbor@*"];
+const tinyCborVersion = Object.entries(lockFile.specifiers).find((
+  [specifier],
+) => specifier.startsWith("jsr:@levischuck/tiny-cbor@"))?.[1];
+if (typeof tinyCborVersion !== "string") {
+  throw new Error("Unable to resolve @levischuck/tiny-cbor version");
+}
 await build({
   entryPoints: ["./index.ts"],
   outDir: "./npm",
@@ -32,6 +37,14 @@ await build({
     },
     bugs: {
       url: "https://github.com/levischuck/tiny-cbor-schema/issues",
+    },
+    types: "./esm/index.d.ts",
+    exports: {
+      ".": {
+        types: "./esm/index.d.ts",
+        import: "./esm/index.js",
+        require: "./script/index.js",
+      },
     },
   },
   postBuild() {

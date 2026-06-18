@@ -36,7 +36,7 @@
   "license": "MIT",
   "exports": "./index.ts",
   "imports": {
-    "@deno/dnt": "jsr:@deno/dnt",
+    "@deno/dnt": "jsr:@deno/dnt@^0.42.3",
     "@levischuck/tiny-cbor": "jsr:@levischuck/tiny-cbor@^0.3.6",
     "@levischuck/tiny-encodings": "jsr:@levischuck/tiny-encodings@^0.2.13",
     "@deno/cache-dir": "jsr:@deno/cache-dir@^0.20",
