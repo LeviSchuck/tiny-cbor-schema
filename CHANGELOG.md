@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.0.11](https://github.com/LeviSchuck/tiny-cbor-schema/compare/v0.0.10...v0.0.11) (2026-06-18)
+
+
+### Bug Fixes
+
+* Bump tiny-cbor ([ea8d71f](https://github.com/LeviSchuck/tiny-cbor-schema/commit/ea8d71fa14056097935bf7381f9e562db023cf1c))
+* Provenance urls ([7b7dd1f](https://github.com/LeviSchuck/tiny-cbor-schema/commit/7b7dd1ff36bb58fe7465562d874c867206a69efe))
+* Support for typescript 6 and 7 ([cd6c746](https://github.com/LeviSchuck/tiny-cbor-schema/commit/cd6c746c033ec8ece9d536e44a66ef8028aac422))
+* Support npmjs ([34b89eb](https://github.com/LeviSchuck/tiny-cbor-schema/commit/34b89eb4a2ac96a6336a64b26eeec8ce53d17e56))
+
 ## [0.0.10](https://github.com/LeviSchuck/tiny-cbor-schema/compare/v0.0.9...v0.0.10) (2025-09-23)
 
 
