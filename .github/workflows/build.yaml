@@ -4,27 +4,18 @@ on: push
 
 jobs:
   build:
+    if: ${{ github.ref_type != 'tag' || !(startsWith(github.ref_name, 'v') && contains(github.ref_name, '.')) }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
       id-token: write
     steps:
       - uses: actions/checkout@v5
-      - name: Get tag version
-        id: get_tag_version
-        run: echo TAG_VERSION=$(cat "version.txt" | tr -d '\n') >> $GITHUB_OUTPUT
-      - name: Read Tag version
-        run: |
-          echo $TAG_VERSION
-        env: 
-          TAG_VERSION: ${{ steps.get_tag_version.outputs.TAG_VERSION }}
       - uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
       - name: Check formatting
         run: deno fmt --check
-      - name: Test with coverage output
-        run: deno test --doc --coverage=coverage
       - name: Lint source
         run: deno lint
       - name: Test with coverage output
@@ -36,7 +27,7 @@ jobs:
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
-          use_oidc: true
           files: ./coverage.lcov
+          use_oidc: true
           slug: LeviSchuck/tiny-cbor-schema
           fail_ci_if_error: true
